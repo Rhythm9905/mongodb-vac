@@ -1,0 +1,1006 @@
+Microsoft Windows [Version 10.0.26200.9445]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Riddhima Sharama>cd C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin
+
+C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin>mongosh "mongodb+srv://cluster0.u5gi0my.mongodb.net/" --apiVersion 1 --username vasanth970399_db_user --
+Enter password: *****************
+Current Mongosh Log ID: 6aa8bd1da8912790ca8cf1eb
+Connecting to:          mongodb+srv://<credentials>@cluster0.u5gi0my.mongodb.net/?appName=mongosh+2.10.0
+MongoServerError: bad auth : authentication failed
+
+C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin>mongosh "mongodb+srv://cluster0.u5gi0my.mongodb.net/" --apiVersion 1 --username <db_username> --password 3mhM5ejjto8h6rhG
+The system cannot find the file specified.
+
+C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin>mongosh "mongodb+srv://cluster0.u5gi0my.mongodb.net/" --apiVersion 1 --username vasanth970399_db_user --password 3mhM5ejjto8h6rhG
+Current Mongosh Log ID: 6aa8bdca1472d60ed9c5f497
+Connecting to:          mongodb+srv://<credentials>@cluster0.u5gi0my.mongodb.net/?appName=mongosh+2.10.0
+Using MongoDB:          8.0.32 (API Version 1)
+Using Mongosh:          2.10.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+Atlas atlas-104b3m-shard-0 [primary] test> show dbs
+test   8.00 KiB
+admin       0 B
+local       0 B
+Atlas atlas-104b3m-shard-0 [primary] test> show dbs
+Sample1  8.00 KiB
+test     8.00 KiB
+admin         0 B
+local         0 B
+Atlas atlas-104b3m-shard-0 [primary] test> show collections
+PCEA24CA020
+Atlas atlas-104b3m-shard-0 [primary] test> use ("PCEA24IT042")
+switched to db PCEA24IT042
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.insertMany([
+|     {
+|         rollNo: 101,
+|         name: "Vasanth",
+|         age: 21,
+|         department: "CSE",
+|         marks: 85,
+|         skills: ["Java", "Python", "MongoDB"],
+|         address: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         scholarship: true
+|     },
+|
+|     {
+|         rollNo: 102,
+|         name: "Rahul",
+|         age: 22,
+|         department: "ECE",
+|         marks: 72,
+|         skills: ["C", "Python", "Arduino"],
+|         address: {
+|             city: "Bangalore",
+|             state: "Karnataka"
+|         },
+|         scholarship: false
+|     },
+|
+|     {
+|         rollNo: 103,
+|         name: "Priya",
+|         age: 20,
+|         department: "CSE",
+|         marks: 91,
+|         skills: ["Java", "Python", "AI"],
+|         address: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         scholarship: true
+|     },
+|
+|     {
+|         rollNo: 104,
+|         name: "Arjun",
+|         age: 23,
+|         department: "MECH",
+|         marks: 68,
+|         skills: ["AutoCAD", "C", "Java"],
+|         address: {
+|             city: "Hyderabad",
+|             state: "Telangana"
+|         }
+|     },
+|
+|     {
+|         rollNo: 105,
+|         name: "Sneha",
+|         age: 21,
+|         department: "IT",
+|         marks: 88,
+|         skills: ["Python", "MongoDB", "HTML"],
+|         address: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         scholarship: true
+|     },
+|
+|     {
+|         rollNo: 106,
+|         name: "Kiran",
+|         age: 24,
+|         department: "EEE",
+|         marks: 65,
+|         skills: ["C", "Arduino", "MATLAB"],
+|         address: {
+|             city: "Pune",
+|             state: "Maharashtra"
+|         },
+|         scholarship: false
+|     },
+|
+|     {
+|         rollNo: 107,
+|         name: "Anjali",
+|         age: 20,
+|         department: "CSE",
+|         marks: 95,
+|         skills: ["Java", "Python", "AI", "MongoDB"],
+|         address: {
+|             city: "Bangalore",
+|             state: "Karnataka"
+|         },
+|         scholarship: true
+|     },
+|
+|     {
+|         rollNo: 108,
+|         name: "Rohit",
+|         age: 22,
+|         department: "IT",
+|         marks: 76,
+|         skills: ["JavaScript", "HTML", "CSS"],
+|         address: {
+|             city: "Hyderabad",
+|             state: "Telangana"
+|         },
+|         scholarship: false
+|     },
+|
+|     {
+|         rollNo: 109,
+|         name: "Divya",
+|         age: 21,
+|         department: "CSE",
+|         marks: 89,
+|         skills: ["Python", "MongoDB", "Java"],
+|         address: {
+|             city: "Chennai",
+|             state: "Tamil Nadu"
+|         },
+|         scholarship: true
+|     },
+|
+|     {
+|         rollNo: 110,
+|         name: "Suresh",
+|         age: 23,
+|         department: "CIVIL",
+|         marks: 70,
+|         skills: ["AutoCAD", "C", "STAAD"],
+|         address: {
+|             city: "Vijayawada",
+|             state: "Andhra Pradesh"
+|         },
+|         scholarship: false
+|     },
+|
+|     {
+|         rollNo: 111,
+|         name: "Meena",
+|         age: 22,
+|         department: "ECE",
+|         marks: 82,
+|         skills: ["Python", "Arduino", "IoT"],
+|         address: {
+|             city: "Bangalore",
+|             state: "Karnataka"
+|         },
+|         scholarship: true
+|     },
+|
+|     {
+|         rollNo: 112,
+|         name: "Akash",
+|         age: 25,
+|         department: "CSE",
+|         marks: 60,
+|         skills: ["C", "Java"],
+|         address: {
+|             city: "Hyderabad",
+|             state: "Telangana"
+|         },
+|         scholarship: false
+|     }
+| ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6aa8c6521472d60ed9c5f498'),
+    '1': ObjectId('6aa8c6521472d60ed9c5f499'),
+    '2': ObjectId('6aa8c6521472d60ed9c5f49a'),
+    '3': ObjectId('6aa8c6521472d60ed9c5f49b'),
+    '4': ObjectId('6aa8c6521472d60ed9c5f49c'),
+    '5': ObjectId('6aa8c6521472d60ed9c5f49d'),
+    '6': ObjectId('6aa8c6521472d60ed9c5f49e'),
+    '7': ObjectId('6aa8c6521472d60ed9c5f49f'),
+    '8': ObjectId('6aa8c6521472d60ed9c5f4a0'),
+    '9': ObjectId('6aa8c6521472d60ed9c5f4a1'),
+    '10': ObjectId('6aa8c6521472d60ed9c5f4a2'),
+    '11': ObjectId('6aa8c6521472d60ed9c5f4a3')
+  }
+}
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.student.countDocument
+PCEA24IT042.student.countDocument
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.student.countDocuments
+[Function: countDocuments] AsyncFunction {
+  apiVersions: [ 1, Infinity ],
+  serverVersions: [ '4.0.3', '999.999.999' ],
+  returnsPromise: true,
+  topologies: [ 'ReplSet', 'Standalone', 'Sharded', 'LoadBalanced' ],
+  returnType: { type: 'unknown', attributes: {} },
+  deprecated: false,
+  platforms: [ 'Compass', 'Browser', 'CLI' ],
+  isDirectShellCommand: false,
+  acceptsRawInput: false,
+  shellCommandCompleter: undefined,
+  newShellCommandCompleter: undefined,
+  help: [Function (anonymous)] Help
+}
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.student.countDocuments()
+0
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.countDocuments()
+12
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find()
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f498'),
+    rollNo: 101,
+    name: 'Vasanth',
+    age: 21,
+    department: 'CSE',
+    marks: 85,
+    skills: [ 'Java', 'Python', 'MongoDB' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f499'),
+    rollNo: 102,
+    name: 'Rahul',
+    age: 22,
+    department: 'ECE',
+    marks: 72,
+    skills: [ 'C', 'Python', 'Arduino' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49a'),
+    rollNo: 103,
+    name: 'Priya',
+    age: 20,
+    department: 'CSE',
+    marks: 91,
+    skills: [ 'Java', 'Python', 'AI' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49b'),
+    rollNo: 104,
+    name: 'Arjun',
+    age: 23,
+    department: 'MECH',
+    marks: 68,
+    skills: [ 'AutoCAD', 'C', 'Java' ],
+    address: { city: 'Hyderabad', state: 'Telangana' }
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49c'),
+    rollNo: 105,
+    name: 'Sneha',
+    age: 21,
+    department: 'IT',
+    marks: 88,
+    skills: [ 'Python', 'MongoDB', 'HTML' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49d'),
+    rollNo: 106,
+    name: 'Kiran',
+    age: 24,
+    department: 'EEE',
+    marks: 65,
+    skills: [ 'C', 'Arduino', 'MATLAB' ],
+    address: { city: 'Pune', state: 'Maharashtra' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49e'),
+    rollNo: 107,
+    name: 'Anjali',
+    age: 20,
+    department: 'CSE',
+    marks: 95,
+    skills: [ 'Java', 'Python', 'AI', 'MongoDB' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49f'),
+    rollNo: 108,
+    name: 'Rohit',
+    age: 22,
+    department: 'IT',
+    marks: 76,
+    skills: [ 'JavaScript', 'HTML', 'CSS' ],
+    address: { city: 'Hyderabad', state: 'Telangana' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a0'),
+    rollNo: 109,
+    name: 'Divya',
+    age: 21,
+    department: 'CSE',
+    marks: 89,
+    skills: [ 'Python', 'MongoDB', 'Java' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a1'),
+    rollNo: 110,
+    name: 'Suresh',
+    age: 23,
+    department: 'CIVIL',
+    marks: 70,
+    skills: [ 'AutoCAD', 'C', 'STAAD' ],
+    address: { city: 'Vijayawada', state: 'Andhra Pradesh' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a2'),
+    rollNo: 111,
+    name: 'Meena',
+    age: 22,
+    department: 'ECE',
+    marks: 82,
+    skills: [ 'Python', 'Arduino', 'IoT' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a3'),
+    rollNo: 112,
+    name: 'Akash',
+    age: 25,
+    department: 'CSE',
+    marks: 60,
+    skills: [ 'C', 'Java' ],
+    address: { city: 'Hyderabad', state: 'Telangana' },
+    scholarship: false
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({rollNo:111})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a2'),
+    rollNo: 111,
+    name: 'Meena',
+    age: 22,
+    department: 'ECE',
+    marks: 82,
+    skills: [ 'Python', 'Arduino', 'IoT' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({ $eq :"CSE"})
+MongoServerError[BadValue]: unknown top level operator: $eq. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({department :({ $eq :"CSE"}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:44)
+
+> 1 | db.students.find({department :({ $eq :"CSE"}})
+    |                                             ^
+  2 |
+
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({department :({ $eq :"CSE"})})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f498'),
+    rollNo: 101,
+    name: 'Vasanth',
+    age: 21,
+    department: 'CSE',
+    marks: 85,
+    skills: [ 'Java', 'Python', 'MongoDB' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49a'),
+    rollNo: 103,
+    name: 'Priya',
+    age: 20,
+    department: 'CSE',
+    marks: 91,
+    skills: [ 'Java', 'Python', 'AI' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49e'),
+    rollNo: 107,
+    name: 'Anjali',
+    age: 20,
+    department: 'CSE',
+    marks: 95,
+    skills: [ 'Java', 'Python', 'AI', 'MongoDB' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a0'),
+    rollNo: 109,
+    name: 'Divya',
+    age: 21,
+    department: 'CSE',
+    marks: 89,
+    skills: [ 'Python', 'MongoDB', 'Java' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a3'),
+    rollNo: 112,
+    name: 'Akash',
+    age: 25,
+    department: 'CSE',
+    marks: 60,
+    skills: [ 'C', 'Java' ],
+    address: { city: 'Hyderabad', state: 'Telangana' },
+    scholarship: false
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({age :({ $eq : 21})})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f498'),
+    rollNo: 101,
+    name: 'Vasanth',
+    age: 21,
+    department: 'CSE',
+    marks: 85,
+    skills: [ 'Java', 'Python', 'MongoDB' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49c'),
+    rollNo: 105,
+    name: 'Sneha',
+    age: 21,
+    department: 'IT',
+    marks: 88,
+    skills: [ 'Python', 'MongoDB', 'HTML' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a0'),
+    rollNo: 109,
+    name: 'Divya',
+    age: 21,
+    department: 'CSE',
+    marks: 89,
+    skills: [ 'Python', 'MongoDB', 'Java' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({marks :({ $lt : 70})})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49b'),
+    rollNo: 104,
+    name: 'Arjun',
+    age: 23,
+    department: 'MECH',
+    marks: 68,
+    skills: [ 'AutoCAD', 'C', 'Java' ],
+    address: { city: 'Hyderabad', state: 'Telangana' }
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49d'),
+    rollNo: 106,
+    name: 'Kiran',
+    age: 24,
+    department: 'EEE',
+    marks: 65,
+    skills: [ 'C', 'Arduino', 'MATLAB' ],
+    address: { city: 'Pune', state: 'Maharashtra' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a3'),
+    rollNo: 112,
+    name: 'Akash',
+    age: 25,
+    department: 'CSE',
+    marks: 60,
+    skills: [ 'C', 'Java' ],
+    address: { city: 'Hyderabad', state: 'Telangana' },
+    scholarship: false
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({marks :({ $gt : 70})})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f498'),
+    rollNo: 101,
+    name: 'Vasanth',
+    age: 21,
+    department: 'CSE',
+    marks: 85,
+    skills: [ 'Java', 'Python', 'MongoDB' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f499'),
+    rollNo: 102,
+    name: 'Rahul',
+    age: 22,
+    department: 'ECE',
+    marks: 72,
+    skills: [ 'C', 'Python', 'Arduino' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49a'),
+    rollNo: 103,
+    name: 'Priya',
+    age: 20,
+    department: 'CSE',
+    marks: 91,
+    skills: [ 'Java', 'Python', 'AI' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49c'),
+    rollNo: 105,
+    name: 'Sneha',
+    age: 21,
+    department: 'IT',
+    marks: 88,
+    skills: [ 'Python', 'MongoDB', 'HTML' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49e'),
+    rollNo: 107,
+    name: 'Anjali',
+    age: 20,
+    department: 'CSE',
+    marks: 95,
+    skills: [ 'Java', 'Python', 'AI', 'MongoDB' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49f'),
+    rollNo: 108,
+    name: 'Rohit',
+    age: 22,
+    department: 'IT',
+    marks: 76,
+    skills: [ 'JavaScript', 'HTML', 'CSS' ],
+    address: { city: 'Hyderabad', state: 'Telangana' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a0'),
+    rollNo: 109,
+    name: 'Divya',
+    age: 21,
+    department: 'CSE',
+    marks: 89,
+    skills: [ 'Python', 'MongoDB', 'Java' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a2'),
+    rollNo: 111,
+    name: 'Meena',
+    age: 22,
+    department: 'ECE',
+    marks: 82,
+    skills: [ 'Python', 'Arduino', 'IoT' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({marks :({ $gte : 50})})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f498'),
+    rollNo: 101,
+    name: 'Vasanth',
+    age: 21,
+    department: 'CSE',
+    marks: 85,
+    skills: [ 'Java', 'Python', 'MongoDB' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f499'),
+    rollNo: 102,
+    name: 'Rahul',
+    age: 22,
+    department: 'ECE',
+    marks: 72,
+    skills: [ 'C', 'Python', 'Arduino' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49a'),
+    rollNo: 103,
+    name: 'Priya',
+    age: 20,
+    department: 'CSE',
+    marks: 91,
+    skills: [ 'Java', 'Python', 'AI' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49b'),
+    rollNo: 104,
+    name: 'Arjun',
+    age: 23,
+    department: 'MECH',
+    marks: 68,
+    skills: [ 'AutoCAD', 'C', 'Java' ],
+    address: { city: 'Hyderabad', state: 'Telangana' }
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49c'),
+    rollNo: 105,
+    name: 'Sneha',
+    age: 21,
+    department: 'IT',
+    marks: 88,
+    skills: [ 'Python', 'MongoDB', 'HTML' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49d'),
+    rollNo: 106,
+    name: 'Kiran',
+    age: 24,
+    department: 'EEE',
+    marks: 65,
+    skills: [ 'C', 'Arduino', 'MATLAB' ],
+    address: { city: 'Pune', state: 'Maharashtra' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49e'),
+    rollNo: 107,
+    name: 'Anjali',
+    age: 20,
+    department: 'CSE',
+    marks: 95,
+    skills: [ 'Java', 'Python', 'AI', 'MongoDB' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49f'),
+    rollNo: 108,
+    name: 'Rohit',
+    age: 22,
+    department: 'IT',
+    marks: 76,
+    skills: [ 'JavaScript', 'HTML', 'CSS' ],
+    address: { city: 'Hyderabad', state: 'Telangana' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a0'),
+    rollNo: 109,
+    name: 'Divya',
+    age: 21,
+    department: 'CSE',
+    marks: 89,
+    skills: [ 'Python', 'MongoDB', 'Java' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a1'),
+    rollNo: 110,
+    name: 'Suresh',
+    age: 23,
+    department: 'CIVIL',
+    marks: 70,
+    skills: [ 'AutoCAD', 'C', 'STAAD' ],
+    address: { city: 'Vijayawada', state: 'Andhra Pradesh' },
+    scholarship: false
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a2'),
+    rollNo: 111,
+    name: 'Meena',
+    age: 22,
+    department: 'ECE',
+    marks: 82,
+    skills: [ 'Python', 'Arduino', 'IoT' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a3'),
+    rollNo: 112,
+    name: 'Akash',
+    age: 25,
+    department: 'CSE',
+    marks: 60,
+    skills: [ 'C', 'Java' ],
+    address: { city: 'Hyderabad', state: 'Telangana' },
+    scholarship: false
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({$and :[{ department : "CSE"},marks :{})})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:53)
+
+> 1 | db.students.find({$and :[{ department : "CSE"},marks :{})})
+    |                                                      ^
+  2 |
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({$and :[{ department : "CSE"},marks :{ $gt : 85})})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:53)
+
+> 1 | db.students.find({$and :[{ department : "CSE"},marks :{ $gt : 85})})
+    |                                                      ^
+  2 |
+
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({$and :[{ department : "CSE"},marks: { $gt : 85})})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:52)
+
+> 1 | db.students.find({$and :[{ department : "CSE"},marks: { $gt : 85})})
+    |                                                     ^
+  2 |
+
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({$and :[{ department : "CSE"}, marks: { $gt : 85})})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:53)
+
+> 1 | db.students.find({$and :[{ department : "CSE"}, marks: { $gt : 85})})
+    |                                                      ^
+  2 |
+
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042>
+
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({$and :[{ department : "CSE"},{marks: { $gt : 85}}]})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49a'),
+    rollNo: 103,
+    name: 'Priya',
+    age: 20,
+    department: 'CSE',
+    marks: 91,
+    skills: [ 'Java', 'Python', 'AI' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f49e'),
+    rollNo: 107,
+    name: 'Anjali',
+    age: 20,
+    department: 'CSE',
+    marks: 95,
+    skills: [ 'Java', 'Python', 'AI', 'MongoDB' ],
+    address: { city: 'Bangalore', state: 'Karnataka' },
+    scholarship: true
+  },
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f4a0'),
+    rollNo: 109,
+    name: 'Divya',
+    age: 21,
+    department: 'CSE',
+    marks: 89,
+    skills: [ 'Python', 'MongoDB', 'Java' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> show dbs
+PCEA24AD026    8.00 KiB
+PCEA24AD028   72.00 KiB
+PCEA24AD043    8.00 KiB
+PCEA24AD051   72.00 KiB
+PCEA24CA001    8.00 KiB
+PCEA24CA016  144.00 KiB
+PCEA24CA019   72.00 KiB
+PCEA24CA020   72.00 KiB
+PCEA24CA055   72.00 KiB
+PCEA24CA059    8.00 KiB
+PCEA24CY001   72.00 KiB
+PCEA24CY002   72.00 KiB
+PCEA24CY005   72.00 KiB
+PCEA24CY020   72.00 KiB
+PCEA24CY022   72.00 KiB
+PCEA24CY023   80.00 KiB
+PCEA24CY024  144.00 KiB
+PCEA24CY031   88.00 KiB
+PCEA24CY055    8.00 KiB
+PCEA24CY064   80.00 KiB
+PCEA24IT009   80.00 KiB
+PCEA24IT011   80.00 KiB
+PCEA24IT024    8.00 KiB
+PCEA24IT036   80.00 KiB
+PCEA24IT042   80.00 KiB
+PCEA24IT047   80.00 KiB
+PCEA24IT049   80.00 KiB
+PCEA24IT051   80.00 KiB
+PCEA24IT055   72.00 KiB
+PCEA24IT056    8.00 KiB
+PCEA24IT058   80.00 KiB
+Sample01       8.00 KiB
+Sample1      152.00 KiB
+pcea24cy011   72.00 KiB
+pcea24cy037   72.00 KiB
+sample02      72.00 KiB
+test          88.00 KiB
+admin               0 B
+local               0 B
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> use "PCEA24IT042"
+MongoshInvalidInputError: [COMMON-10001] Invalid database name: "PCEA24IT042"
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.Student.updateOne(
+|     { studentId: 101 },
+|     { $push: { skills: "MongoDB" } }
+| )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.student.find({rollNo : 101})
+
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> db.students.find({rollNo : 101})
+[
+  {
+    _id: ObjectId('6aa8c6521472d60ed9c5f498'),
+    rollNo: 101,
+    name: 'Vasanth',
+    age: 21,
+    department: 'CSE',
+    marks: 85,
+    skills: [ 'Java', 'Python', 'MongoDB' ],
+    address: { city: 'Chennai', state: 'Tamil Nadu' },
+    scholarship: true
+  }
+]
+Atlas atlas-104b3m-shard-0 [primary] PCEA24IT042> use ProductDB
+|
+| db.createCollection("Product")
+switched to db ProductDB
+Atlas atlas-104b3m-shard-0 [primary] ProductDB> db.Product.insertMany([
+|   {
+|     productId: 101,
+|     name: "Laptop",
+|     category: "Electronics",
+|     price: 55000,
+|     stock: 20
+|   },
+|   {
+|     productId: 102,
+|     name: "Smartphone",
+|     category: "Electronics",
+|     price: 25000,
+|     stock: 35
+|   },
+|   {
+|     productId: 103,
+|     name: "Headphones",
+|     category: "Electronics",
+|     price: 2500,
+|     stock: 50
+|   },
+|   {
+|     productId: 104,
+|     name: "Keyboard",
+|     category: "Accessories",
+|     price: 1500,
+|     stock: 40
+|   },
+|   {
+|     productId: 105,
+|     name: "Mouse",
+|     category: "Accessories",
+|     price: 800,
+|     stock: 60
+|   },
+|   {
+|     productId: 106,
+|     name: "Monitor",
+|     category: "Electronics",
+|     price: 12000,
+|     stock: 15
+|   },
+|   {
+|     productId: 107,
+|     name: "Tablet",
+|     category: "Electronics",
+|     price: 18000,
+|     stock: 25
+|   },
+|   {
+|     productId: 108,
+|     name: "Printer",
+|     category: "Office",
+|     price: 9000,
+|     stock: 10
+|   },
+|   {
+|     productId: 109,
+|     name: "Webcam",
+|     category: "Accessories",
+|     price: 3000,
+|     stock: 30
+|   },
+|   {
+|     productId: 110,
+|     name: "USB Drive",
+|     category: "Accessories",
+|     price: 700,
+|     stock: 100
+|   }
+| ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6aa900fd1472d60ed9c5f4a4'),
+    '1': ObjectId('6aa900fd1472d60ed9c5f4a5'),
+    '2': ObjectId('6aa900fd1472d60ed9c5f4a6'),
+    '3': ObjectId('6aa900fd1472d60ed9c5f4a7'),
+    '4': ObjectId('6aa900fd1472d60ed9c5f4a8'),
+    '5': ObjectId('6aa900fd1472d60ed9c5f4a9'),
+    '6': ObjectId('6aa900fd1472d60ed9c5f4aa'),
+    '7': ObjectId('6aa900fd1472d60ed9c5f4ab'),
+    '8': ObjectId('6aa900fd1472d60ed9c5f4ac'),
+    '9': ObjectId('6aa900fd1472d60ed9c5f4ad')
+  }
+}
+Atlas atlas-104b3m-shard-0 [primary] ProductDB> db.Product.updateOne(
+|   { productId: 101 },
+|   { $set: { price: 60000 } }
+| )
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Atlas atlas-104b3m-shard-0 [primary] ProductDB>
+
+
+
+
+
+
+
+
+
+
+
+S
