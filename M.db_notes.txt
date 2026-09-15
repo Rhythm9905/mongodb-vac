@@ -1,0 +1,255 @@
+MY SQL - database    no Sql-database
+-tables               -collections
+-rows                 -documents
+-columns              -Fields
+
+diff btw char(20) and varchar(20) flexible storage (dynamic)
+
+1) db name creation
+ USE ("Poornima")
+
+2) collection creation /table 
+db.createCollection("Students")
+
+3) Add documents -->insert row-->
+          db.Students.insertOne({
+          name:"Riddhima",
+          age:21,
+          cgpa:9
+          address:{
+city:"Jaipur",
+pincode:302020,
+}
+})
+
+4) ecom eg-->
+
+USE ("Ecom")
+
+db.createCollection("Products")
+
+db.Products.insertOne({
+	Name:"iPhonexx",
+	company:"apple",
+	price:50000,
+	features:['slim', 'camera pixel=xx', 'xxGB',]
+})
+
+2024pceaitriddhima42_db_user
+0GGQl32m4BnVIFK1
+
+
+task:
+
+use PoornimaCollegeOfEngineering
+
+db.Student.insertMany([
+  {
+    studentId: 101,
+    name: "Riddhima Sharma",
+    department: "Information Technology",
+    graduationYear: 2028,
+    cgpa: 7.5,
+    address: {
+      city: "Jaipur",
+      state: "Rajasthan",
+      pincode: 302022
+    },
+    skills: ["Java", "MongoDB", "Power BI"]
+  },
+  {
+    studentId: 102,
+    name: "Aarav Gupta",
+    department: "Computer Science",
+    graduationYear: 2028,
+    cgpa: 8.2,
+    address: {
+      city: "Jaipur",
+      state: "Rajasthan",
+      pincode: 302019
+    },
+    skills: ["Python", "SQL", "Machine Learning"]
+  },
+  {
+    studentId: 103,
+    name: "Priya Mehta",
+    department: "Electronics",
+    graduationYear: 2027,
+    cgpa: 8.7,
+    address: {
+      city: "Kota",
+      state: "Rajasthan",
+      pincode: 324005
+    },
+    skills: ["Arduino", "C", "Embedded Systems"]
+  },
+  {
+    studentId: 104,
+    name: "Aditya Singh",
+    department: "Information Technology",
+    graduationYear: 2028,
+    cgpa: 7.9,
+    address: {
+      city: "Ajmer",
+      state: "Rajasthan",
+      pincode: 305001
+    },
+    skills: ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    studentId: 105,
+    name: "Ananya Jain",
+    department: "Computer Science",
+    graduationYear: 2027,
+    cgpa: 9.1,
+    address: {
+      city: "Jaipur",
+      state: "Rajasthan",
+      pincode: 302004
+    },
+    skills: ["Python", "Django", "SQL"]
+  },
+  {
+    studentId: 106,
+    name: "Rahul Verma",
+    department: "Mechanical",
+    graduationYear: 2027,
+    cgpa: 7.6,
+    address: {
+      city: "Alwar",
+      state: "Rajasthan",
+      pincode: 301001
+    },
+    skills: ["AutoCAD", "C++", "MATLAB"]
+  },
+  {
+    studentId: 107,
+    name: "Sneha Agarwal",
+    department: "Information Technology",
+    graduationYear: 2028,
+    cgpa: 8.4,
+    address: {
+      city: "Bikaner",
+      state: "Rajasthan",
+      pincode: 334001
+    },
+    skills: ["MongoDB", "React", "JavaScript"]
+  },
+  {
+    studentId: 108,
+    name: "Karan Sharma",
+    department: "Civil",
+    graduationYear: 2027,
+    cgpa: 7.3,
+    address: {
+      city: "Jodhpur",
+      state: "Rajasthan",
+      pincode: 342001
+    },
+    skills: ["AutoCAD", "STAAD Pro", "Surveying"]
+  },
+  {
+    studentId: 109,
+    name: "Ishita Kapoor",
+    department: "Computer Science",
+    graduationYear: 2028,
+    cgpa: 8.9,
+    address: {
+      city: "Jaipur",
+      state: "Rajasthan",
+      pincode: 302017
+    },
+    skills: ["Java", "DSA", "Git"]
+  },
+  {
+    studentId: 110,
+    name: "Mohit Yadav",
+    department: "Information Technology",
+    graduationYear: 2027,
+    cgpa: 7.8,
+    address: {
+      city: "Sikar",
+      state: "Rajasthan",
+      pincode: 332001
+    },
+    skills: ["Python", "Power BI", "Excel"]
+  },
+  {
+    studentId: 111,
+    name: "Neha Gupta",
+    department: "Electronics",
+    graduationYear: 2028,
+    cgpa: 8.1,
+    address: {
+      city: "Jaipur",
+      state: "Rajasthan",
+      pincode: 302018
+    },
+    skills: ["C", "IoT", "Arduino"]
+  },
+  {
+    studentId: 112,
+    name: "Vivek Kumar",
+    department: "Mechanical",
+    graduationYear: 2027,
+    cgpa: 7.7,
+    address: {
+      city: "Bharatpur",
+      state: "Rajasthan",
+      pincode: 321001
+    },
+    skills: ["SolidWorks", "MATLAB", "CAD"]
+  },
+  {
+    studentId: 113,
+    name: "Muskan Sharma",
+    department: "Information Technology",
+    graduationYear: 2028,
+    cgpa: 8.6,
+    address: {
+      city: "Jaipur",
+      state: "Rajasthan",
+      pincode: 302021
+    },
+    skills: ["HTML", "CSS", "React"]
+  },
+  {
+    studentId: 114,
+    name: "Harsh Vardhan",
+    department: "Computer Science",
+    graduationYear: 2027,
+    cgpa: 8.3,
+    address: {
+      city: "Kota",
+      state: "Rajasthan",
+      pincode: 324001
+    },
+    skills: ["C++", "DSA", "Python"]
+  },
+  {
+    studentId: 115,
+    name: "Simran Kaur",
+    department: "Civil",
+    graduationYear: 2028,
+    cgpa: 7.9,
+    address: {
+      city: "Udaipur",
+      state: "Rajasthan",
+      pincode: 313001
+    },
+    skills: ["AutoCAD", "Revit", "Civil 3D"]
+  }
+])
+
+OPerators:
+lt,gt,lte,gte,eq.
+ use them with doller sign to avoid treating them as variables
+
+CRUD
+creat read update delete
+
+
+APIs-get,post,put,delete.
+
+
+
