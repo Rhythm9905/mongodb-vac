@@ -1,0 +1,149 @@
+Microsoft Windows [Version 10.0.26200.9445]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin>mongosh --version
+2.10.0
+
+C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin>mongosh --version
+2.10.0
+
+C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin>mongosh
+Current Mongosh Log ID: 6aa7a6e5fc37c5ecdaf5f1af
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.10.0
+MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+
+C:\Users\Riddhima Sharama\Downloads\mongosh-2.10.0-win32-x64\mongosh-2.10.0-win32-x64\bin>mongosh "mongodb+srv://cluster0.w3qron8.mongodb.net/" --apiVersion 1 --username 2024pceaitriddhima42_db_user
+Enter password: ****************
+Current Mongosh Log ID: 6aa7ad7b9ec1bb93c5c06e98
+Connecting to:          mongodb+srv://<credentials>@cluster0.w3qron8.mongodb.net/?appName=mongosh+2.10.0
+Using MongoDB:          8.0.32 (API Version 1)
+Using Mongosh:          2.10.0
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+Atlas atlas-r74qnc-shard-0 [primary] test> use("Poornima")
+switched to db Poornima
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.createCollection("Students")
+{ ok: 1 }
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.Students.insertOne({
+| name:"Riddhima",
+|           age:21,
+|           cgpa:9
+|           address:{
+| city:"Jaipur",
+| pincode:302020,
+| }
+| })
+|
+Uncaught:
+SyntaxError: Unexpected token, expected "," (5:10)
+
+  3 |           age:21,
+  4 |           cgpa:9
+> 5 |           address:{
+    |           ^
+  6 | city:"Jaipur",
+  7 | pincode:302020,
+  8 | }
+
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> name:"Riddhima",
+|           age:21,
+|           cgpa:9,
+|           address:{
+|           city:"Jaipur",
+| pincode:302020,
+| }
+| })
+|
+Uncaught:
+SyntaxError: Missing semicolon. (2:13)
+
+  1 | name:"Riddhima",
+> 2 |           age:21,
+    |              ^
+  3 |           cgpa:9,
+  4 |           address:{
+  5 |           city:"Jaipur",
+
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> name:"Riddhima",
+|           age:21,
+|           cgpa:9,
+|           address:{
+|           city:"Jaipur",
+| pincode:302020,
+| },
+| })
+|
+Uncaught:
+SyntaxError: Missing semicolon. (2:13)
+
+  1 | name:"Riddhima",
+> 2 |           age:21,
+    |              ^
+  3 |           cgpa:9,
+  4 |           address:{
+  5 |           city:"Jaipur",
+
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.Students.insertOne({name:"Riddhima",
+|           age:21,
+|           cgpa:9,
+|           address:{
+|           city:"Jaipur",
+| pincode:302020,
+| },
+| })
+|
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa7b3b99ec1bb93c5c06e99')
+}
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.createCollection("Company")
+{ ok: 1 }
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.Company.insertOne({})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa7b5439ec1bb93c5c06e9a')
+}
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.Company.insertOne({})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa7b5519ec1bb93c5c06e9b')
+}
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.Company.insertOne({name:EY,})
+ReferenceError: EY is not defined
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.Company.insertOne({name:"EY",profile:"Consultant",criteria:["cgpa=9","no back Dues","leetcodeprobs(DSA)"]})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6aa7b7179ec1bb93c5c06e9c')
+}
+Atlas atlas-r74qnc-shard-0 [primary] Poornima> db.Students.insertMany([
+|   { name: "Aarav", age: 22, cgpa: 8.5, address: { city: "Delhi", pincode: 110001 } },
+|   { name: "Priya", age: 20, cgpa: 9.2, address: { city: "Mumbai", pincode: 400001 } },
+|   { name: "Karan", age: 23, cgpa: 7.8, address: { city: "Chennai", pincode: 600001 } },
+|   { name: "Sneha", age: 21, cgpa: 8.9, address: { city: "Kolkata", pincode: 700001 } },
+|   { name: "Rahul", age: 22, cgpa: 9.1, address: { city: "Bengaluru", pincode: 560001 } },
+|   { name: "Meera", age: 20, cgpa: 8.7, address: { city: "Hyderabad", pincode: 500001 } },
+|   { name: "Vikram", age: 24, cgpa: 7.5, address: { city: "Pune", pincode: 411001 } },
+|   { name: "Ananya", age: 21, cgpa: 9.3, address: { city: "Jaipur", pincode: 302001 } },
+|   { name: "Rohan", age: 22, cgpa: 8.4, address: { city: "Lucknow", pincode: 226001 } }
+| ])
+|
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6aa7b7cb9ec1bb93c5c06e9d'),
+    '1': ObjectId('6aa7b7cb9ec1bb93c5c06e9e'),
+    '2': ObjectId('6aa7b7cb9ec1bb93c5c06e9f'),
+    '3': ObjectId('6aa7b7cb9ec1bb93c5c06ea0'),
+    '4': ObjectId('6aa7b7cb9ec1bb93c5c06ea1'),
+    '5': ObjectId('6aa7b7cb9ec1bb93c5c06ea2'),
+    '6': ObjectId('6aa7b7cb9ec1bb93c5c06ea3'),
+    '7': ObjectId('6aa7b7cb9ec1bb93c5c06ea4'),
+    '8': ObjectId('6aa7b7cb9ec1bb93c5c06ea5')
+  }
+}
+Atlas atlas-r74qnc-shard-0 [primary] Poornima>
