@@ -1,0 +1,212 @@
+# MongoDB Notes: Database Commands and Student Management System
+
+## 1. Basic Database Commands
+
+Show all databases:
+```javascript
+show dbs
+```
+
+Select or create a database:
+```javascript
+use StudentManagement
+```
+
+Display the current database:
+```javascript
+db
+```
+
+Show collections in the current database:
+```javascript
+show collections
+```
+
+Display database statistics:
+```javascript
+db.stats()
+```
+
+NOTE: A newly created database appears in `show dbs` only after data has been stored in it.
+
+---
+
+## 2. Create the Courses Collection
+
+Insert course records:
+
+```javascript
+db.courses.insertMany([
+  { courseId: "C101", courseName: "DBMS", department: "IT" },
+  { courseId: "C102", courseName: "Java", department: "IT" },
+  { courseId: "C103", courseName: "Python", department: "CSE" }
+])
+```
+
+## 3. Create the Students Collection
+
+Insert student records:
+
+```javascript
+db.students.insertMany([
+  { studentId: 1, name: "Aman", courseId: "C101", marks: 85 },
+  { studentId: 2, name: "Priya", courseId: "C101", marks: 90 },
+  { studentId: 3, name: "Rahul", courseId: "C102", marks: 75 },
+  { studentId: 4, name: "Neha", courseId: "C102", marks: 80 },
+  { studentId: 5, name: "Karan", courseId: "C103", marks: 95 }
+])
+```
+
+Here, `courseId` connects each student to the corresponding course.
+
+## 4. Update Student Marks
+
+Update Aman's marks from 85 to 88:
+
+```javascript
+db.students.updateOne(
+  { studentId: 1 },
+  { $set: { marks: 88 } }
+)
+```
+
+Verify the updated record:
+
+```javascript
+db.students.findOne({ studentId: 1 })
+```
+
+## 5. Create an Index on Courses
+
+Create a unique ascending index on `courseId`:
+
+```javascript
+db.courses.createIndex(
+  { courseId: 1 },
+  { unique: true }
+)
+```
+
+Display all indexes:
+
+```javascript
+db.courses.getIndexes()
+```
+
+Explanation:
+- `createIndex()` creates an index.
+- `1` represents ascending order.
+- `unique: true` prevents duplicate course IDs.
+- Indexes can improve query performance for matching fields.
+
+## 6. Aggregation: Total Students and Average Marks Per Course
+
+```javascript
+db.students.aggregate([
+  {
+    $group: {
+      _id: "$courseId",
+      totalStudents: { $sum: 1 },
+      averageMarks: { $avg: "$marks" }
+    }
+  },
+  {
+    $lookup: {
+      from: "courses",
+      localField: "_id",
+      foreignField: "courseId",
+      as: "courseDetails"
+    }
+  },
+  {
+    $unwind: "$courseDetails"
+  },
+  {
+    $project: {
+      _id: 0,
+      courseId: "$_id",
+      courseName: "$courseDetails.courseName",
+      totalStudents: 1,
+      averageMarks: { $round: ["$averageMarks", 2] }
+    }
+  },
+  {
+    $sort: { courseId: 1 }
+  }
+])
+```
+
+### Aggregation Operators
+
+- `$group`: Groups students by course.
+- `$sum: 1`: Counts the students in each group.
+- `$avg`: Calculates average marks.
+- `$lookup`: Joins data from the courses collection.
+- `$unwind`: Converts an array element into an individual document.
+- `$project`: Selects and renames output fields.
+- `$round`: Rounds the average to two decimal places.
+- `$sort`: Sorts the output by course ID.
+
+### Expected Output
+
+| Course ID | Course Name | Total Students | Average Marks |
+|-----------|-------------|----------------|---------------|
+| C101 | DBMS | 2 | 89 |
+| C102 | Java | 2 | 77.5 |
+| C103 | Python | 1 | 95 |
+
+## 7. Verify Records
+
+Display all student records:
+
+```javascript
+db.students.find()
+```
+
+Display all course records:
+
+```javascript
+db.courses.find()
+```
+
+List collections:
+
+```javascript
+show collections
+```
+
+## 8. Important Viva Questions
+
+Q1. What is MongoDB?
+MongoDB is a NoSQL document-oriented database that stores data in BSON documents.
+
+Q2. What does `show dbs` do?
+It displays databases containing stored data.
+
+Q3. What does `use StudentManagement` do?
+It switches to the StudentManagement database or selects it for use.
+
+Q4. What is a collection?
+A collection is a group of documents, similar to a table in a relational database.
+
+Q5. What is an index?
+An index is a data structure that helps MongoDB find documents more efficiently.
+
+Q6. What is aggregation?
+Aggregation processes documents through stages to perform calculations and transform data.
+
+Q7. What is `$lookup`?
+It joins documents from another collection based on matching fields.
+
+Q8. What does `$avg` calculate?
+It calculates the average of numeric values in a group.
+
+Q9. What does `$sum: 1` calculate?
+It counts the documents in each group.
+
+Q10. Why use `courseId`?
+It connects students with their respective courses.
+
+## RESULT
+
+The Student Management and Performance System was implemented using MongoDB. Two collections were created, records were inserted, student marks were updated, a unique index was created, and an aggregation pipeline calculated the total number of students and average marks for each course.
